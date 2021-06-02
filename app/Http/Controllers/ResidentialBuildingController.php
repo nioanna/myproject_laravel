@@ -26,4 +26,8 @@ class ResidentialBuildingController extends Controller
 
         return response()->json(null,204);
     }
+    public function showNum( int $num) {
+        
+        return ResidentialBuilding::simplePaginate($num)->items();
+    }
 }
